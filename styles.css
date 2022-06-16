@@ -1,3 +1,7 @@
+:root {
+  --text-grey: rgb(70, 70, 70);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,17 +16,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
 }
 
-ul {
-    list-style: none;
-}
 
 /* Nav */
 nav {
     width: 100%;
     z-index: 10;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -33,37 +31,48 @@ nav {
     background-color: transparent;
     margin-top: 2rem;
 }
-.nav-list a {
+nav ul {
+    list-style: none;
+}
+.navlink {
     display: block;
     color: white;
     background-color: black;
-    border-radius: 0.2rem;
     text-decoration: none;
-}
-.nav-list a:hover {
-    color: lightgreen;
-}
-.nav-list {
-    display: flex;
-    margin-right: 2rem;
-}
-nav a.navlink {
-    display: block;
     margin-right: 2rem;
     padding: 1.5rem;
     border-radius: 0.6rem;
 }
-.dropdown-link {
-    position: absolute;
-    left: -999px;
+.navlink:hover {
+    color: lightgreen;
 }
-
+.dropdown-list {
+    position: relative;
+    display: inline-block;
+}
+/*.nav-list a:hover + .dropdown-list {
+}*/
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+.dropdown-list {
+    display: none;
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.dropdown-link {
+    display: block;
+}
+.nav-list > .nav-link:hover .dropdown-list {
+    display: block;
+}
 
 /* Hero */
 #pseudo-hero {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgb(104, 73, 52), green);
+    background: linear-gradient(rgb(175, 148, 130), green);
 }
 h1 {
     font-size: 7rem;
@@ -71,10 +80,12 @@ h1 {
     top: 33vh;
     left: 10vw;
     font-weight: 900;
+    letter-spacing: 0.3rem;
 }
 #tagline {
     font-size: 3rem;
     font-weight: bold;
+    letter-spacing: 0.2rem;
     position: absolute;
     color: white;
     font-family: sans-serif;
@@ -87,21 +98,62 @@ h2 {
     font-size: 3rem;
     font-weight: bold;
     font-family: sans-serif;
-    color: rgb(70, 70, 70);
+    color: var(--text-grey);
     width: 80vw;
     max-width: 65%;
     margin: 4rem auto;
+}
+.pseudo-img {
+  width: 45rem;
+  height: 28rem;
+  background: linear-gradient(90deg, lightgreen, green);
+  margin: 0 auto;
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: var(--text-grey);
+  text-align: center;
+  margin: 10rem auto 5rem;
+}
+h4 {
+  margin: 7.3rem auto 1rem;
+  width: 80vw;
+  max-width: 65%;
+  font-size: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.4rem;
+  border-bottom: 1px solid green;
+}
+h5 {
+  margin: 3.3rem auto 1rem;
+  padding-left: 2rem;
+  width: 80vw;
+  max-width: 65%;
+  font-size: 2rem;
+  font-family: serif;
 }
 p {
     width: 80vw;
     max-width: 65%;
     font-size: 2rem;
     margin: 1.3rem auto;
-    color: rgb(70, 70, 70);
+    color: var(--text-grey);
     line-height: 3.2rem;
 }
-
-
+main ul {
+  width: 80vw;
+  max-width: 65%;
+  font-size: 2rem;
+  margin: 1.3rem auto;
+  color: var(--text-grey);
+  line-height: 3.2rem;
+  padding-left: 7rem;
+}
+main a {
+  color: black;
+  text-decoration-style: dotted;
+}
 /* Footer */
 footer {
     background-color: rgb(40, 40, 40);
