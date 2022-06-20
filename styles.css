@@ -143,7 +143,7 @@ p {
     color: var(--text-grey);
     line-height: 3.2rem;
 }
-main ul {
+main ul, ol {
   width: 80vw;
   max-width: 85%;
   font-size: 2rem;
@@ -155,6 +155,9 @@ main ul {
 main a {
   color: black;
   text-decoration-style: dotted;
+}
+main p:last-of-type {
+  margin-top: 7rem;
 }
 
 /* Zero Waste Sidebar */
@@ -176,6 +179,7 @@ main a {
   width: 90%;
   padding: 0;
   margin: 2rem;
+  text-align: center;
 }
 .zero-waste-sidebar p {
   line-height: 2.1rem;
