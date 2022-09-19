@@ -1,6 +1,8 @@
 # EarthWise
-New website for EarthWise - my first full website from scratch
+New website for EarthWise - my first full website from scratch\
+
 Current version at https://www.liveearthwise.com
+
 Development on hold for learning full stack, React
 
 ## To do: 
