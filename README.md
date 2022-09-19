@@ -1,9 +1,10 @@
-# earthWise
+# EarthWise
 New website for EarthWise - my first full website from scratch
 Current version at https://www.liveearthwise.com
 Development on hold for learning full stack, React
 
 ## To do: 
+
 - Finish adding content
 - Fix ' characters
 - Add and confirm all links
